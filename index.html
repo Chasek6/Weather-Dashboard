@@ -1,0 +1,64 @@
+              <!DOCTYPE html>
+<html lang="EN">
+    <head>
+       <!--META DATA-->
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device=width" initial-scale="1.0">
+       <meta http-equiv="=X-UA-Compatible" content="IE-edge">
+      
+       <!-- TITLE-->
+       <title>Weather Dashboard Api</title>
+
+       <!--GOOGLE FONTS-->
+
+       
+       <!--CSS LINK & BOOTSTRAP-->
+       <link rel="stylesheet" href="https://mdbootstrap.com/docs/standard/forms/search/">
+      <link rel="stylesheet" href="./assets/style.css">
+    </head>
+        <body>
+
+    <!--HEADER Goes HERE-->
+    <body>
+        <header class="custom-gradient">
+          <center> <h1 class="text-center text-white fs-1 fw-bolder py-4 mb-3"> Weather Dashboard </h1> </center>
+        </header>
+
+        <main class="container">
+            <div class="row">
+                <form class="border-box" id="search-form">
+                    <h2>SEARCH FOR A CITY:</h2>
+                    <input class="form-control" id="search-input" type="text" placeholder="New York City">
+                    <div class="form-text"> </div>
+                    <!-- Display utility class -->
+                    <div class="d-lg-grid gap-2">
+                        <br>
+                        <button class="btn btn-primary" id="searchButton" type="button">search</button>
+                    </div>
+                </form>
+
+            <!--SEARCH RESULT HISTORY-->
+            <div class="--" id=" searchHistroy">
+            </div> 
+            </div>
+
+            <!--SEARCH RESULTS-->
+            <div class="row">
+                <div class="col-8">
+                </div>
+
+                    <!--CURRENT CITY DATA-->
+                    <div class="border border-5 border-info p-4 m-4 custom-gradient" id="searchResults"></div>
+
+                    <!--The five day Forecast Cards!-->
+                    <h2 class="fw-bold"> The Five Day Forecast</h2>
+                    <div class="row me-auto" id="forecastCards"></div>
+            </div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./assets/script.js"></script> 
+        </body>
+        <!--Main Section for E-Script links and Jquery and Bootstrap.js-->
+
+      
+</html>
