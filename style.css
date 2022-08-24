@@ -46,7 +46,7 @@ p {
 	margin: 11px;
 }
 .colOne {
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 }
 .colTwo {
 	background-color: white;
@@ -54,5 +54,41 @@ p {
 .histBtnRow {
 	margin-top: 5px;
 	margin-bottom: 5px;
+    border: solid; color: rgb(179, 199, 25);
 }
 
+.favorable{
+    background-color: green;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+  }
+  .cardOne {
+    padding: 25px;
+    background-color: rgb(179, 199, 25);
+}
+  .moderate{
+    background-color: rgb(240, 163, 19);
+    padding: 6px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: solid;
+  }
+  
+  .severe{
+    background-color: red;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+  } 
+  
+  .cardTodayDate {
+      font-size: 20px;
+  }
+  .dayCard {
+    padding: 13px;
+      width: 100%;
+      border: 5px solid rgb(179, 199, 25);
+
+  }
+  

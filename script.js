@@ -1,27 +1,22 @@
-var APIkey ='44f16f0f5b78c42ed94c3a20683882d4';
+// Main Variables section & query selector function--click function---if statement---push city to local storage & eventlistener -- prevent function from recurring same results every click.
+
 var city = 'New York'
+var APIkey ='44f16f0f5b78c42ed94c3a20683882d4';
 var currentDate = moment().format('dddd, MMMM Do YYYY');
 var searchHistory = [];
 $('.search').on("click", function (event) {
 	event.preventDefault();
 	city = $(this).parent('.btnPar').siblings('.textVal').val().trim();
-	if (city === "") {return;};
+	if (city === "") {return;}
 	searchHistory.push(city);
 	localStorage.setItem('city', JSON.stringify(searchHistory));
 	weatherForecastEl.empty();
-	getSearchHistory();
 	getForecastToday();
+	getSearchHistory();
 });
-
-
-
-// element for five day forecast
 var weatherForecastEl = $('.weatherForecast');
 
-
-
-
-// API Pull for weather in five day forecast
+// API Which Pulls for weather in five day forecast
 function getweatherForecast() {
 	var getweatherForecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${APIkey}`;
 
@@ -80,14 +75,14 @@ function getweatherForecast() {
 
 		}
 	});
-};
-
-
-
-
-
+}
 var weatherDetails = $('.weatherDetails')
-// launches the five day forecast
+
+
+
+
+
+// five day forecast
 
 
 function getForecastToday() {
@@ -108,16 +103,11 @@ function getForecastToday() {
         
         var cityLon = response.coord.lon;
         var cityLat = response.coord.lat;
-
-
-        //icon  forecast
 		$('.weatherIcons').attr('src', `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`);
-
 
 		//current temperature for city
 		var pEl = $('<p>').text(`Temperature: ${response.main.temp} °F`);
 		weatherDetails.append(pEl);
-
 
 		
 		var pElFeelsLike = $('<p>').text(`Feels Like: ${response.main.feels_like} °F`);
@@ -154,15 +144,10 @@ function getForecastToday() {
 		});
 	});
 	getweatherForecast();
-};
+}
 
 
-
-
-
-
-
-//Load page with example content to improve user experience and look of site
+//Example content fot user experience and look of site
 function sampleCity() {
 
 	var searchHistoryStore = JSON.parse(localStorage.getItem('city'));
@@ -172,22 +157,16 @@ function sampleCity() {
 	}
 	getSearchHistory();
 	getForecastToday();
-};
-// Call function above to display sample city on load
+}
+// Call function above to display sample city on load) sample city function 
 sampleCity();
 
-// Convert Search History to clickable elements to improve user experience
-
-
-
-
-
+// Search History-clickable elements 
 
 
 function getSearchHistory() {
 	var searchHistoryClickify = $('.searchHistory');
 	searchHistoryClickify.empty();
-
 	for (let i = 0; i < searchHistory.length; i++) {
 		var rowEl = $('<row>');
 		var btnEl = $('<button>').text(`${searchHistory[i]}`)
@@ -205,4 +184,4 @@ function getSearchHistory() {
 		weatherForecastEl.empty();
 		getForecastToday();
 	});
-};
+}
