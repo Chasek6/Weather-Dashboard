@@ -62,16 +62,7 @@ function getweatherForecast() {
 			var m = moment(`${myWeather[i].currentDate}`).format('MM/DD/YYYY');
 			divElHeader.text(m);
 			divElCard.append(divElHeader)
-			//Temp
-			var pElTemperature = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
-			divElBody.append(pElTemperature);
-			//Feels Like
-			var pElFeelsLike = $('<p>').text(`Feels Like: ${myWeather[i].feels_like} °F`);
-			divElBody.append(pElFeelsLike);
-			//Humidity
-			var pElHumidity = $('<p>').text(`Humidity: ${myWeather[i].humidity} %`);
-			divElBody.append(pElHumidity);
-
+		
 
             var divElBody = $('<div>');
 			divElBody.attr('class', 'cardBody');
