@@ -3,9 +3,15 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Chasek6/api-weather-dashboard)
 ## Description
 The application is a 5-day forecast of the weather for whatever city of the user decides to pick. The Weather Dashboard will present you with current & future conditions for the city and will add previous searched cities to a user city search-list. I decided on giving the webpage a tropical color scheme to give users the feeling of vacation while scoping out possible weather for a trip.  URL Link here --> https://chasek6.github.io/Weather-Dashboard/
+
+
+# ScreenShots
+![WD.PNG](Assests/WD.PNG)
+![WD1.PNG](Assests/WD1.PNG)
 ## Table of Contents 
 - [API Weather Dashboard](#api-weather-dashboard)
   - [Description](#description)
+- [ScreenShots](#screenshots)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
