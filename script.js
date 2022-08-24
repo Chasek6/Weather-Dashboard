@@ -51,7 +51,7 @@ function getweatherForecast() {
 			var divElCard = $('<div>');
 			divElCard.attr('class', 'card text-white mb-3 cardOne');
 			divElCard.attr('style', 'max-width: 200px;');
-			forecastWeekEl.append(divElCard);
+			weatherForecastEl.append(divElCard);
 
 			var divElHeader = $('<div>');
 			divElHeader.attr('class', 'cardHeader')
