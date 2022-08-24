@@ -8,7 +8,7 @@ $('.search').on("click", function (event) {
 	if (city === "") {return;};
 	searchHistory.push(city);
 	localStorage.setItem('city', JSON.stringify(searchHistory));
-	forecastWeekEl.empty();
+	weatherForecastEl.empty();
 	getSearchHistory();
 	getForecastToday();
 });
@@ -162,21 +162,6 @@ function getForecastToday() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Load page with example content to improve user experience and look of site
 function sampleCity() {
 
@@ -192,14 +177,6 @@ function sampleCity() {
 sampleCity();
 
 // Convert Search History to clickable elements to improve user experience
-
-
-
-
-
-
-
-
 
 
 
