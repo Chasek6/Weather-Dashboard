@@ -1,8 +1,6 @@
 var APIkey ='44f16f0f5b78c42ed94c3a20683882d4';
 var city = 'New York'
 var currentDate = moment().format('dddd, MMMM Do YYYY');
-
-
 var searchHistory = [];
 $('.search').on("click", function (event) {
 	event.preventDefault();
@@ -15,8 +13,14 @@ $('.search').on("click", function (event) {
 	getForecastToday();
 });
 
-// Define element for five day forecast
+
+
+// element for five day forecast
 var weatherForecastEl = $('.weatherForecast');
+
+
+
+
 // API Pull for weather in five day forecast
 function getweatherForecast() {
 	var getweatherForecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${APIkey}`;
@@ -43,14 +47,6 @@ function getweatherForecast() {
 		}) 
 		for (let i = 0; i < myWeather.length; i++) {
 
-            var pElTemperature = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
-			divElBody.append(pElTemperature);
-			//Feels Like
-			var pElFeelsLike = $('<p>').text(`Feels Like: ${myWeather[i].feels_like} °F`);
-			divElBody.append(pElFeelsLike);
-			//Humidity
-			var pElHumidity = $('<p>').text(`Humidity: ${myWeather[i].humidity} %`);
-			divElBody.append(pElHumidity);
             
 			var divElCard = $('<div>');
 			divElCard.attr('class', 'card text-white mb-3 cardOne');
@@ -73,9 +69,20 @@ function getweatherForecast() {
 			divElIcon.attr('src', `https://openweathermap.org/img/wn/${myWeather[i].icon}@2x.png`);
 			divElBody.append(divElIcon);
 
+			var pElTemperature = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
+			divElBody.append(pElTemperature);
+			//Feels Like
+			var pElFeelsLike = $('<p>').text(`Feels Like: ${myWeather[i].feels_like} °F`);
+			divElBody.append(pElFeelsLike);
+			//Humidity
+			var pElHumidity = $('<p>').text(`Humidity: ${myWeather[i].humidity} %`);
+			divElBody.append(pElHumidity);
+
 		}
 	});
 };
+
+
 
 
 
@@ -134,7 +141,7 @@ function getForecastToday() {
 			var uviSpan = $('<span>').text(response.current.uvi);
 			var uvi = response.current.uvi;
 			pElUvi.append(uviSpan);
-			forecastDetails.append(pElUvi);
+			weatherDetails.append(pElUvi);
 			if (uvi >= 0 && uvi <= 2) {
 				uviSpan.attr('class', 'favorable');
 			} else if (uvi > 2 && uvi <= 5) {
@@ -218,7 +225,7 @@ function getSearchHistory() {
 	$('.histBtn').on("click", function (event) {
 		event.preventDefault();
 		city = $(this).text();
-		forecastWeekEl.empty();
+		weatherForecastEl.empty();
 		getForecastToday();
 	});
 };
