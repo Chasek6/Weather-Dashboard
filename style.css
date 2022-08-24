@@ -1,0 +1,56 @@
+h1 {
+	background: hsla(191, 60%, 89%, 1);
+    background: linear-gradient(90deg, hsla(191, 60%, 89%, 1) 0%, hsla(56, 59%, 86%, 1) 50%, hsla(25, 85%, 69%, 1) 100%);}
+    .custom-gradient-card {
+    background: -moz-linear-gradient(90deg, hsla(191, 60%, 89%, 1) 0%, hsla(56, 59%, 86%, 1) 50%, hsla(25, 85%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(191, 60%, 89%, 1) 0%, hsla(56, 59%, 86%, 1) 50%, hsla(25, 85%, 69%, 1) 100%);
+	text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    /* margin: 100px; */
+      /* padding: 10px; */
+}
+label {
+	margin-top: 15px;
+	font-weight: bolder;
+	font-size: 22px;
+    padding-left: 33px;
+    font-family: 'Merriweather Sans', sans-serif;
+    
+}
+
+body {
+
+    .custom-gradient 
+        background: hsla(191, 60%, 89%, 1);
+        background: linear-gradient(90deg, hsla(191, 60%, 89%, 1) 0%, hsla(56, 59%, 86%, 1) 50%, hsla(25, 85%, 69%, 1) 100%);}
+        .custom-gradient-card {
+        background: -moz-linear-gradient(90deg, hsla(191, 60%, 89%, 1) 0%, hsla(56, 59%, 86%, 1) 50%, hsla(25, 85%, 69%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(191, 60%, 89%, 1) 0%, hsla(56, 59%, 86%, 1) 50%, hsla(25, 85%, 69%, 1) 100%);}
+
+        .search {
+            background-color: rgb(247, 177, 0);
+            color: white;
+            border: hsla(25, 85%, 69%, 1);
+            border-radius: 50px;
+            font-size: var(--font-size);
+    cursor: pointer;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 .20em; color:rgb(165, 109, 32)
+        }
+
+.card {
+	margin: 11px;
+}
+.colOne {
+	background-color: white;
+}
+.colTwo {
+	background-color: white;
+}
+.histBtnRow {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+

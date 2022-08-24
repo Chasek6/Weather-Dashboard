@@ -1,64 +1,59 @@
-              <!DOCTYPE html>
-<html lang="EN">
-    <head>
-       <!--META DATA-->
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device=width" initial-scale="1.0">
-       <meta http-equiv="=X-UA-Compatible" content="IE-edge">
-      
-       <!-- TITLE-->
-       <title>Weather Dashboard Api</title>
-
-       <!--GOOGLE FONTS-->
-
-       
-       <!--CSS LINK & BOOTSTRAP-->
-       <link rel="stylesheet" href="https://mdbootstrap.com/docs/standard/forms/search/">
-      <link rel="stylesheet" href="./assets/style.css">
-    </head>
-        <body>
-
-    <!--HEADER Goes HERE-->
-    <body>
-        <header class="custom-gradient">
-          <center> <h1 class="text-center text-white fs-1 fw-bolder py-4 mb-3"> Weather Dashboard </h1> </center>
-        </header>
-
-        <main class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!-- Linking CSS & BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<!---main body -->
+<body>
+    <!-- Title -->
+    <header>
+        <h1>WEATHER FORECAST</h1>
+    </header>
+    <!-- Search Area -->
+    <section id="search">
+        <div class="container-fluid mainCon"> 
             <div class="row">
-                <form class="border-box" id="search-form">
-                    <h2>SEARCH FOR A CITY:</h2>
-                    <input class="form-control" id="search-input" type="text" placeholder="New York City">
-                    <div class="form-text"> </div>
-                    <!-- Display utility class -->
-                    <div class="d-lg-grid gap-2">
-                        <br>
-                        <button class="btn btn-primary" id="searchButton" type="button">search</button>
-                    </div>
-                </form>
+                <div class="col-12 col-md-3 col-xl-3 colOne">
+                    <label>Choose your Destination!</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control textVal" placeholder="New York"/>
+                                <div class="input-group-append btnPar">
+                                    <br>
+                                    <button class="btn search" type="button" id="button-addon2">FIND CITY</button>
+                                </div>
+                        </div>
+                    <div class="container searchHistory">
 
-            <!--SEARCH RESULT HISTORY-->
-            <div class="--" id=" searchHistroy">
-            </div> 
-            </div>
-
-            <!--SEARCH RESULTS-->
-            <div class="row">
-                <div class="col-8">
+                        
+                        <!-- SEARCH HISTORY HERE-->
+                    </div> 
                 </div>
-
-                    <!--CURRENT CITY DATA-->
-                    <div class="border border-5 border-info p-4 m-4 custom-gradient" id="searchResults"></div>
-
-                    <!--The five day Forecast Cards!-->
-                    <h2 class="fw-bold"> The Five Day Forecast</h2>
-                    <div class="row me-auto" id="forecastCards"></div>
+                    <div class="col-12 col-md-9 col-xl-9 colTwo">   
+                <div class="row weatherForecast">
+                    <div class=" bg-light mb-3 dayCard">
+                        <h2 class="cardHeader weatherCity"></h2>
+                        <h3 class="cardHeader weatherDate"></h3>
+                        <img class="weatherIcons"/>
+                        <div class="cardBody weatherDetails">
+                    </div>
+                </div>
             </div>
-        </main>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="./assets/script.js"></script> 
-        </body>
-        <!--Main Section for E-Script links and Jquery and Bootstrap.js-->
-
-      
+            <h2>5-Day-Weather Forecast</h2>
+            <div class="row weatherForecast"></div>
+        </div>
+    </section>
+    <!--Linking JQuery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<!-- Linking Moment for Date&Time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+</body>
 </html>
