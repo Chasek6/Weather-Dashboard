@@ -153,7 +153,7 @@ function getForecastToday() {
 			}
 		});
 	});
-	getForecastWeek();
+	getweatherForecast();
 };
 
 
