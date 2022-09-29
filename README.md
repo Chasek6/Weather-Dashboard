@@ -6,6 +6,7 @@ The application is a 5-day forecast of the weather for whatever city of the user
 
 
 # ScreenShots
+<img width="1559" alt="WDT" src="https://user-images.githubusercontent.com/108581086/192925121-9254361c-face-4096-9e06-c5817d94b7a3.png">
 ![WD.PNG](Assests/WD.PNG)
 ![WD1.PNG](Assests/WD1.PNG)
 ## Table of Contents 
