@@ -9,6 +9,9 @@ The application is a 5-day forecast of the weather for whatever city of the user
 <img width="1559" alt="WDT" src="https://user-images.githubusercontent.com/108581086/192925121-9254361c-face-4096-9e06-c5817d94b7a3.png">
 ![WD.PNG](Assests/WD.PNG)
 ![WD1.PNG](Assests/WD1.PNG)
+![Weather Forecast -logos](https://user-images.githubusercontent.com/108581086/192958540-c4a9c2ab-d3de-4b4d-8d23-03a3e40d1b1b.jpeg)
+
+
 ## Table of Contents 
 - [API Weather Dashboard](#api-weather-dashboard)
   - [Description](#description)
